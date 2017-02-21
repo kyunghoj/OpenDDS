@@ -1,0 +1,6 @@
+project: dcps_tcp, dcps_udp, dcps_multicast, dcps_test_java {
+
+  after      += pubsubtest_idl
+  javacflags += -classpath ../pubsubtest_idl/DDS_PubSubTest_types.jar
+
+}

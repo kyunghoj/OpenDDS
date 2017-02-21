@@ -1,0 +1,13 @@
+module PubSubTest {
+
+#pragma DCPS_DATA_TYPE "PubSubTest::Msg"
+#pragma DCPS_DATA_KEY "PubSubTest::Msg subject_id"
+
+  struct Msg {
+    string from;
+    string subject;
+    long subject_id;
+    string text;
+    long   count;
+  };
+};

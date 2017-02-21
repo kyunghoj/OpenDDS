@@ -1,0 +1,18 @@
+project: dcps_java {
+
+    idlflags        += -Wb,stub_export_include=PubSubTest_Export.h \
+                       -Wb,stub_export_macro=PubSubTest_Export
+    dcps_ts_flags   += -Wb,stub_export_macro=PubSubTest_Export
+    idl2jniflags    += -Wb,stub_export_include=PubSubTest_Export.h \
+                       -Wb,stub_export_macro=PubSubTest_Export
+    dynamicflags    += PUBSUBTEST_BUILD_DLL
+
+    specific {
+      jarname        = DDS_PubSubTest_types
+    }
+
+    TypeSupport_Files {
+      PubSubTest.idl
+    }
+
+}
